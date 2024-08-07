@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #121063;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    color: #fff;
+    font-size: 2em;
+    font-weight: bold;
+    margin: 3% 0% 0% 50%;
+    border: 0;
+}
+
+.filme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    height: 470px;
+    margin: 50px 0px 0px 0px;
+}
+
+.imagem-filme {
+    width: 280px;
+    height: 400px;
+}
+
+.botaoAmarelo{
+    width: 7cm;
+    height: 1cm;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #ffcc00, #ff6600);
+}
+
+.botaoAzul{
+    width: 7cm;
+    height: 1cm;
+    border-radius: 20px;
+    background-color: #121063;
+}
+
+.botaoRosa{
+    width:7cm;
+    height: 1cm;
+    border-radius: 20px;
+    background-color: pink;
+}
+
+.botaoLaranja{
+    width: 7cm;
+    height: 1cm;
+    border-radius: 20px;
+    background-color: orange;
+}
+
+.filmes {
+    display: flex;
+    justify-content: space-between;
+}

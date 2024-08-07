@@ -36,3 +36,45 @@ nav a {
     color: #fff;
     font-weight: bold;
 }
+.video-container {
+    position: relative;
+    align-items: center;
+    padding: 200px 0 0 350px;
+    width: 640px;
+}
+
+.controles {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+button:hover {
+    background: #ddd;
+}
+
+input[type="range"] {
+    width: 100px;
+}
+
+.progresso {
+    flex: 1;
+    height: 5px;
+    background: #444;
+    margin: 0 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#progresso-barra {
+    height: 100%;
+    width: 0;
+    background: #70337c;
+    border-radius: 5px;
+}
