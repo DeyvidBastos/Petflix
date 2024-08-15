@@ -1,7 +1,8 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #121063;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(73,9,121,1) 47%, rgba(0,0,0,1) 100%);
     font-family: Arial, sans-serif;
     color: #fff;
 }
@@ -48,13 +49,14 @@ header {
     height: 1cm;
     border-radius: 20px;
     background: linear-gradient(90deg, #ffcc00, #ff6600);
+    font-style: bold;
 }
 
 .botaoAzul{
     width: 7cm;
     height: 1cm;
     border-radius: 20px;
-    background-color: #121063;
+    background-color: #2b2977;
 }
 
 .botaoRosa{

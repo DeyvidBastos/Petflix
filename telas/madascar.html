@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madagascar 2</title>
+    <link rel="stylesheet" href="/estilo/styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Petflix</div>
+        <nav> 
+            <ul>
+                <li><a href="tela_1.html">Início</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="video-container">
+        <video id="videoPlayer" class="video" width="640" height="360">
+            <source src="/filmes/Bolt - Supercão - 2008, Dub.mp4" type="video/mp4">
+        </video>
+        <div class="controls">
+            <div class="left-controls">
+                <button id="playPauseBtn" class="control-btn">⏯️</button>
+                <button id="muteBtn" class="control-btn">🔇</button>
+                <input type="range" id="volumeSlider" class="volume-slider" min="0" max="1" step="0.01" value="1">
+            </div>
+            <div class="progress-container">
+                <input type="range" id="progressBar" class="progress-bar" value="0" max="100">
+            </div>
+            <div class="right-controls">
+                <button id="fullscreenBtn" class="control-btn">⛶</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js_telas/tela_2.js"></script>
+</body>
+</html>

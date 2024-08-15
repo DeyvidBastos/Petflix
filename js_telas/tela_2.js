@@ -1,29 +1,35 @@
-const video = document.getElementById('video');
-const playPauseButton = document.getElementById('play-pause');
-const volumeControl = document.getElementById('volume');
-const progressBar = document.getElementById('progresso-bara');
-const progressContainer = document.querySelector('.progresso');
-
-playPauseButton.addEventListener('click', () => {
-    if (video.paused) {
-        video.play();
-        playPauseButton.textContent = 'Pause';
+const videoPlayer = document.getElementById('videoPlayer');
+const playPauseBtn = document.getElementById('playPauseBtn');
+const muteBtn = document.getElementById('muteBtn');
+const volumeSlider = document.getElementById('volumeSlider');
+const progressBar = document.getElementById('progressBar');
+const fullscreenBtn = document.getElementById('fullscreenBtn');
+playPauseBtn.addEventListener('click', () => {
+    if (videoPlayer.paused) {
+        videoPlayer.play();
+        playPauseBtn.textContent = '⏸️';
     } else {
-        video.pause();
-        playPauseButton.textContent = 'Play';
-    }
-});
+        videoPlayer.pause();
+        playPauseBtn.textContent = '⏯️';
+    }        });
+muteBtn.addEventListener('click', () => {
+    videoPlayer.muted = !videoPlayer.muted;
+    muteBtn.textContent = videoPlayer.muted ? '🔈' : '🔇';});
+volumeSlider.addEventListener('input', () => {
+    videoPlayer.volume = volumeSlider.value;
+    muteBtn.textContent = videoPlayer.volume == 0 ? '🔈' : '🔇';       });
+videoPlayer.addEventListener('timeupdate', () => {
+    const progress = (videoPlayer.currentTime / videoPlayer.duration) * 100;
+    progressBar.value = progress;});
+progressBar.addEventListener('input', () => {
+    const time = (progressBar.value / 100) * videoPlayer.duration;
+    videoPlayer.currentTime = time;   });
 
-volumeControl.addEventListener('input', (event) => {
-    video.volume = event.target.value;
-});
+fullscreenBtn.addEventListener('click', () => {
+    if (!document.fullscreenElement) {
+        videoPlayer.requestFullscreen();
+    } else {
+        document.exitFullscreen();
+    }      });
 
-video.addEventListener('timeupdate', () => {
-    const percent = (video.currentTime / video.duration) * 100;
-    progressBar.style.width = `${percent}%`;
-});
-
-progressContainer.addEventListener('click', (event) => {
-    const progressTime = (event.offsetX / progressContainer.offsetWidth) * video.duration;
-    video.currentTime = progressTime;
-});
+  
